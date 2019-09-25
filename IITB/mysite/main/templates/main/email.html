@@ -1,0 +1,8 @@
+{% extends "main/header.html" %}
+{% block content %}
+ <form method = "POST" action = "{% url 'main:email_compose' %}" >
+ 	{% csrf_token %}
+ 	<input type="email" name = "to_email" placeholder="Enter your email"  style="width: 500px">
+ 	<br><br>
+ 	<input class = "btn btn-outline-secondary my-2 my-sm-0" type="submit"/>
+{% endblock %}
